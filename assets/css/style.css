@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+a,
+a:hover,
+a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    /* font-family: "Roboto"; */
+}
+
+.bg-property {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+:is(#nav .dropdown-list li) .list-item,
+.list-item:hover,
+.list-item:active,
+.list-item:focus {
+    background-color: black;
+    color: #fff !important;
+    font-size: 12px;
+}
+
+.side-menu button img {
+
+    height: 25px;
+}
+
+.side-menu a,
+.side-menu a:hover {
+    color: #f7b500 !important;
+}
+
+
+
+#search {
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    transition: 0.30s ease-out;
+
+}
+
+#search.active {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    transition: 0.30s ease-in;
+}
+
+#search .input_box {
+
+    transform: translate(-50%, -50%);
+
+    border-bottom: 1px solid #9b9b9b;
+
+    max-width: 400px;
+
+    width: 90%;
+}
+
+#search .input_box .search {
+
+    top: 5px;
+}
+
+#search .input_box .menu_crose {
+    top: 3px;
+    height: 16px;
+    width: 16px;
+}
+
+#search .input_box input {
+
+    outline: none;
+
+    color: #f7b500;
+}
+
+#search .crose {
+
+    height: 25px;
+
+    width: 25px;
+
+    right: 6%;
+
+    top: 6%;
+
+    cursor: pointer;
+}
+
+
+#nav .logo .img,
+#footer .content .logo .img,
+:is(#business, #team, #projects, #Partners, #news, #feedback) .side-line .icon {
+    background-image: url(../img/Logo.svg);
+    height: 26px;
+    width: 87px;
+    filter: brightness(0);
+}
+
+#nav .nav-list li a {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+#nav .nav-icon .icon a {
+
+    background-image: url(../img/navigatiion/search.svg);
+
+    height: 22px;
+
+    width: 20px;
+}
+
+#nav .nav-icon .icon button,
+#nav .nav-icon .icon button:focus,
+#banner .content .content-info button {
+    box-shadow: none;
+    border: none;
+}
+
+#nav .dropdown-list {
+    overflow: hidden;
+    max-height: 0;
+    border: none;
+    transition: all 1s;
+    background-color: #000;
+}
+
+#nav .dropdown-list ul {
+    min-width: 160px;
+}
+
+#nav .nav-list li:hover .dropdown-list,
+#nav .nav-list li .dropdown-list.show,
+#nav .nav-icon .nav-item:hover .dropdown-list {
+    max-height: 300px;
+}
+
+#nav .nav-icon .nav-item .dropdown-list.show {
+    display: none;
+}
+
+.cart span {
+
+    font-size: 9px;
+
+    background: #000 !important;
+}
+
+#nav .nav-list li a::before,
+#nav .nav-icon .icon>a:before,
+#nav .nav-list li.active a::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 5px;
+    background: hsl(43.97deg 100% 48.43% / 43%);
+    width: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 0.3s ease-in;
+    left: 0;
+}
+#nav .nav-list li.active a::before{
+    width: 100%;
+}
+#nav .nav-list li:hover a::before,
+#nav .nav-icon .language:hover>a:before {
+    width: 100%;
+}
+
+#nav .nav-list li ul li .list-item::before {
+    display: none;
+}
+
+main>article:nth-child(odd) {
+    background-color: #f8f4eb;
+}
+
+main>article:first-child {
+    background-color: #fff;
+}
+
+#banner .content {
+
+    padding-left: 215px;
+
+    height: 615px;
+}
+
+#banner .content .img {
+    background-image: url(../img/banner/banner-bg1.jpg);
+    height: 100%;
+    background-size: cover;
+}
+
+#banner .content .content-info {
+    text-align: left;
+    top: 50%;
+    left: 0;
+    color: #000;
+    transform: translateY(-50%);
+    width: 400px;
+}
+
+#banner .content .content-info h1 {
+    background-color: #f7b500;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#banner .content .content-info button {
+
+    background: transparent;
+
+    position: relative;
+
+    font-size: 16px;
+}
+
+#banner .content .content-info button::after,
+#news .card .card-body>button::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 12px;
+    background-image: url(../img/banner/right-arrow.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 12px;
+    transition: all 0.5s ease-in;
+    right: -15px;
+    top: 27%;
+}
+
+#banner .content .content-info button:hover:after {
+    right: -20px;
+}
+
+
+
+:is(#business, #team, #projects, #Partners, #news, #feedback) .side-line small {
+
+    color: #f7b500;
+
+    background-color: #fff0;
+}
+
+:is(#business, #team, #projects, #Partners, #news, #feedback) .side-line .icon {
+
+    width: 40px;
+}
+
+#business .card .img {
+    background-image: url(../img/business/icon_1.svg);
+    height: 70px;
+    width: 70px;
+}
+
+#business .card p {
+    font-size: 14px;
+    color: #696969;
+}
+#projects{
+    
+}
+#projects .scroll-bar{
+    height: 300px;
+}
+#projects .scroll-bar .box{
+    background-image: url(../img/projects/img1.jpg);
+    background-size: cover;
+    background-position: left;
+    overflow: hidden;
+}
+#projects .scroll-bar .box .card{
+    
+width: 200px;
+    
+right: -200px;
+    
+transition: all 0.3s;
+    
+overflow: hidden;
+}
+#projects .scroll-bar .box .card .card-body{
+padding-top: 175px;
+}
+
+
+#projects .active .scroll-bar .box .card{
+    right: 0px;
+}
+
+
+#half-carousel .owl-nav{
+text-align: left;
+padding-top: 15px;
+}
+#half-carousel .owl-nav button{
+}
+
+
+
+
+#team .card {
+    font-size: 14px;
+}
+
+
+#Partners .partners_logo {
+    border: 1px solid #f1e2c2;
+}
+
+#Partners .partners_logo .img {
+
+    height: 50px;
+
+    background-size: contain;
+}
+
+#news .card {
+    background-color: #f9f9f9;
+}
+
+#news .card:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)), url(../img/news/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+#news .card-material2:before {
+    background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)), url(../img/news/img2.jpg);
+
+}
+
+#news .card-material3:before {
+    background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)), url(../img/news/img3.jpg);
+
+}
+
+#news .card:hover:before {
+    opacity: 1;
+}
+
+#news .card .card-body,
+#news .card .card-body button {
+    transition: all 0.3s;
+}
+
+#news .card:hover .card-body,
+#news .card:hover .card-body button {
+    color: #fff !important;
+}
+
+#news .card .card-body>small {
+
+    font-size: 12px;
+}
+
+#news .card .card-body>small span {
+
+    color: #f7b500;
+}
+
+#news .card .card-body>p {
+    font-weight: 600;
+}
+
+#news .card .card-body>button {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#news .card .card-body>button::after {
+
+    top: 10%;
+}
+
+#news .card:hover .card-body>button::after {
+    filter: invert(1);
+}
+
+#news .card .card-body .user-info {}
+
+#news .card .card-body .user-info img {
+
+    height: 30px;
+
+    width: 30px;
+
+}
+
+#news .card .card-body .user-info .text {}
+
+#news .card .card-body .user-info .text h3 {
+
+    font-size: 13px;
+}
+
+#news .card .card-body .user-info .text p {
+
+    font-size: 11px;
+
+}
+
+#feedback {
+
+    position: relative;
+}
+
+#feedback #slid_carousel {}
+
+#feedback #slid_carousel .user-info .info {}
+
+#feedback #slid_carousel .user-info .info p {
+
+    font-size: 18px;
+
+    color: #000000b8;
+
+    font-weight: 400;
+}
+
+#feedback #slid_carousel .user-info .info h3 {
+
+    font-size: 16px;
+}
+
+#feedback #slid_carousel .user-info .info small {
+
+    font-size: 12px;
+}
+
+#feedback #slid_carousel .user-info img {
+
+    height: 70px;
+
+    width: 70px;
+}
+
+
+#feedback #slid_carousel .owl-nav {
+
+position: absolute;
+
+top: 45px;
+
+right: 80px;
+}
+
+#feedback #slid_carousel .owl-nav button,#half-carousel .owl-nav button {
+    font-size: 30px;
+    padding: 0 25px !important;
+    color: #fff;
+    background: #000;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+
+#feedback #slid_carousel .owl-nav button.disabled {
+    color: transparent;
+    background: transparent;
+}
+
+
+
+
+#footer a {
+    color: #fff;
+}
+
+#footer .content .logo .img {
+
+    filter: none;
+}
+
+#footer .content p {
+    padding-right: 40%;
+}
+
+#footer .content .social li a {
+
+    font-size: 14px;
+}
+
+:is(#footer .content, #team .card) .social li a:hover {
+    text-decoration: underline;
+}
+
+#footer .persnal-info {
+
+    font-size: 15px;
+}
+
+#footer .persnal-info ul li a {
+
+    max-width: 175px;
+
+    width: 100%;
+
+    display: block;
+}
+
+#footer .persnal-info ul li:first-child a {
+
+    color: #f7b500;
+
+    font-weight: 600;
+
+    font-size: 17px;
+}
+

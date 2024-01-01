@@ -1,0 +1,46 @@
+@media screen and (max-width: 768px){
+    #banner .content{
+        height: 400px;
+        padding-left: 100px;
+    }
+    #banner .content .content-info{
+        top: 25%;
+        transform: translateY(-25%);
+    }
+    #footer .persnal-info{
+        padding-top: 35px;
+    }
+#feedback #slid_carousel .owl-nav {position: relative;top: auto;right: auto;margin-top: 30px;}
+}
+@media screen and (max-width: 576px){
+    #banner .content{
+        height: 400px;
+        padding-left: 85px;
+    }
+    #banner .content .content-info h1{
+        font-size: 30px;
+    }
+    #feedback #slid_carousel .user-info{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    
+}
+@media screen and (max-width: 400px) {
+    
+    #nav .logo .img{
+        width: 60px;
+    }
+    #nav .nav-icon .icon a{
+        width: 16px;
+    }
+    #feedback #slid_carousel .user-info .info{
+        padding-right: 0 !important;
+    }
+}
+@media screen and (max-width: 325px) {
+    :is(#business,#team,#projects,#Partners,#news,#feedback) .side-line{
+        display: none;
+    }
+}

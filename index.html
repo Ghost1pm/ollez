@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="with=device-with,
+    initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title></title>
+  <!--===LINK BOOTSTRAP===-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!--===OWL CAROUSEL LINK===-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!--===AOS LINK===-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+</head>
+
+<body>
+
+
+    <!--===search===-->
+  <div id="search" class="position-fixed top-0 bottom-0 start-0 end-0 bg-black z-2">
+    <img class="crose position-absolute " src="assets/img/menu/crose.svg" alt="" onclick="togglehide1()">
+    <div class="input_box position-absolute top-50 start-50">
+      <img class="search position-absolute" src="assets/img/menu/search.svg" alt="">
+      <input type="text " class="bg-transparent border-0 fs-5 fw-bold w-100 px-5 pb-3" placeholder="Search here">
+      <img class="menu_crose position-absolute end-0" src="assets/img/menu/input_crose.svg" alt="">
+    </div>
+  </div>
+
+    <!--===side-menu===-->
+  <div class="side-menu offcanvas offcanvas-end bg-black pt-3 pe-3" style="width: 350px !important;" tabindex="-1"
+    id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header justify-content-end">
+
+      <button type="button" class="border-0 bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close">
+        <img src="assets/img/menu/crose.svg" alt="">
+      </button>
+    </div>
+    <div class="content offcanvas-body ">
+      <ul class="fs-4 list-unstyled fw-bold ps-5 position-relative  navbar-nav  position-relative"
+        style="top: 25%; transform: translateY(-25%);">
+        <li class="nav-item"><a class="nav-link" href="#">Facebook</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Instagram</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Behance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Dribbble</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Email</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <!--===navigation===-->
+  <nav id="nav" class="bs-light navbar navbar-expand-lg p-sm-3 px-xs-1 ">
+    <div class="container-fluid">
+
+      <!--===logo===-->
+      <a class="logo navbar-brand " href="#">
+        <div class="img bg-property"></div>
+      </a>
+
+      <!--===nav list===-->
+      <div class="collapse navbar-collapse order-lg-1 order-2" id="navbarSupportedContent">
+        <ul class="column-gap-3 column-gap-xl-4 nav-list navbar-nav m-auto mb-2 mb-lg-0 ">
+          <li class="nav-item active">
+            <a class="nav-link active d-inline-block" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-inline-block" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Page
+            </a>
+            <div class="dropdown-menu dropdown-list rounded-0 p-0 d-block">
+              <ul class="px-2 py-3 ">
+                <li><a class="dropdown-item list-item" href="#">shop</a></li>
+                <li><a class="dropdown-item list-item" href="#">contact</a></li>
+                <li><a class="dropdown-item list-item" href="#">404</a></li>
+              </ul>
+            </div>
+
+
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Portfolio
+            </a>
+            <div class="dropdown-menu dropdown-list rounded-0 p-0 d-block">
+              <ul class="px-2 py-3">
+                <li><a class="dropdown-item list-item" href="#">Portfolio list</a></li>
+                <li><a class="dropdown-item list-item" href="#">Portfolio grid</a></li>
+                <li><a class="dropdown-item list-item" href="#">Portfolio masonry</a></li>
+              </ul>
+            </div>
+
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu dropdown-list rounded-0 p-0 d-block">
+              <ul class="px-2 py-3">
+                <li><a class="dropdown-item list-item" href="#">Blog standard</a></li>
+                <li><a class="dropdown-item list-item" href="#">Blog grid</a></li>
+                <li><a class="dropdown-item list-item" href="#">Blog post</a></li>
+              </ul>
+            </div>
+
+          </li>
+
+        </ul>
+      </div>
+
+      <!--===nav icons list===-->
+      <ul class="order-1 column-gap-4 align-items-center  nav-icon navbar-nav ms-auto my-0  flex-row">
+        <li class="icon nav-item nav-link">
+          <a class="bg-property d-block" onclick="toggleshow1()" href="#"></a>
+        </li>
+        <li class="icon nav-item nav-link">
+          <a class="cart bg-property d-block position-relative" href="#"
+            style="background-image: url(assets/img/navigatiion/shopping-cart.svg);">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+              <span class="visually-hidden">cart items</span>
+            </span></a>
+        </li>
+        <li class="language dropdown icon nav-item nav-link d-none d-sm-block">
+          <a class="d-block position-relative " href="#" style="background-image: none;
+            font-size: 18px;
+                      font-weight: 500;
+                      width: 36px;" role="button">ENG</a>
+          <div class="mt-3 position-absolute dropdown-menu dropdown-list rounded-0 p-0 d-block">
+            <ul class="px-2 py-3">
+              <li><a class="dropdown-item list-item" href="#">ARB</a></li>
+              <li><a class="dropdown-item list-item" href="#">FRE</a></li>
+
+            </ul>
+          </div>
+        </li>
+        <li class="icon nav-item nav-link ps-lg-5 ps-md-4 ps-sm-3 ps-0">
+          <a class="bg-property d-block" href="#"
+            style="background-image: url(assets/img/navigatiion/social\ icon@2x.svg);" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></a>
+        </li>
+        <li class="icon nav-item nav-link">
+          <button class="navbar-toggler ps-0 ps-xs-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <!--===main===-->
+  <main>
+
+    <!--===banner===-->
+    <article id="banner" class="pb-5">
+      <div class="container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="content carousel-item active ">
+              <div class="img bg-property d-block w-100"></div>
+              <div class="content-info position-absolute  carousel-caption " data-aos="fade-left">
+                <h1 class="d-inline-block px-4 py-4" >Remarkable</h1>
+                <h1 class="d-inline-block px-4 py-4" >Digital agency</h1>
+                <button class="d-block mt-3 text-uppercase" >explore project</button>
+              </div>
+            </div>
+            <div class="content carousel-item ">
+              <div class="img bg-property d-block w-100"
+                style="background-image: url(assets/img/banner/banner-bg2.jpg);"></div>
+              <div class="content-info position-absolute  carousel-caption " data-aos="fade-left">
+                <h1 class="d-inline-block px-4 py-4" >Remarkable</h1>
+                <h1 class="d-inline-block px-4 py-4" >Digital agency</h1>
+                <button class="d-block mt-3 text-uppercase" >explore project</button>
+              </div>
+            </div>
+            <div class="content carousel-item ">
+              <div class="img bg-property d-block w-100"
+                style="background-image: url(assets/img/banner/banner-bg3.jpg);"></div>
+              <div class="content-info position-absolute  carousel-caption " data-aos="fade-left">
+                <h1 class="d-inline-block px-4 py-4" >Remarkable</h1>
+                <h1 class="d-inline-block px-4 py-4" >Digital agency</h1>
+                <button class="d-block mt-3 text-uppercase" >explore project</button>
+              </div>
+            </div>
+            <div class="content carousel-item ">
+              <div class="img bg-property d-block w-100"
+                style="background-image: url(assets/img/banner/banner-bg4.jpg);"></div>
+              <div class="content-info position-absolute  carousel-caption " data-aos="fade-left">
+                <h1 class="d-inline-block px-4 py-4" >Remarkable</h1>
+                <h1 class="d-inline-block px-4 py-4" >Digital agency</h1>
+                <button class="d-block mt-3 text-uppercase" >explore project</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!--===business===-->
+    <article id="business" class="py-5">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-2 col-1">
+            <div class="side-line position-relative me-4  py-2 h-100">
+              <div class="h-100 position-relative" style="width: 1px; background-color: #c1c1c1;left: 10px;     top: 20px;"
+                role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              </div>
+              <small type="button" class="position-absolute top-0 start-0 fs-5 "
+                style="width: 2rem; height:2rem;">01</small>
+              <div class="d-none d-sm-block icon bg-property position-absolute top-0 " style="    left: 35px;"></div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-11">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xl-5 col-md-6 "  data-aos="fade-up">
+                  <h2 >We help and solve your business problem.</h2>
+                </div>
+                <div class="col-md-6 offset-xl-1" data-aos="fade-up">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio corporis delectus dolorem possimus, dolor rerum.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12 ">
+                  <div class="card mt-3 pt-3 border-0" style="width: 100%;display: block;">
+                    <div class="img bg-property ms-2" data-aos="fade-up"></div>
+                    <div class="card-body mt-3" data-aos="fade-up">
+                      <h5 class="card-title">Market Research
+                      </h5>
+                      <p class="card-text">Lorem Ipsum is simply text the printing and typesetting standard industry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 ">
+                  <div class="card mt-3 pt-3 border-0" style="width: 100%;display: block;">
+                    <div class="img bg-property ms-2" data-aos="fade-up" style="background-image: url(assets/img/business/icon_2.svg);"></div>
+                    <div class="card-body mt-3" data-aos="fade-up">
+                      <h5 class="card-title">Market Research
+                      </h5>
+                      <p class="card-text">Lorem Ipsum is simply text the printing and typesetting standard industry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 ">
+                  <div class="card mt-3 pt-3 border-0" style="width: 100%;display: block;">
+                    <div class="img bg-property ms-2" data-aos="fade-up" style="background-image: url(assets/img/business/icon_3.svg);"></div>
+                    <div class="card-body mt-3" data-aos="fade-up">
+                      <h5 class="card-title">Market Research
+                      </h5>
+                      <p class="card-text">Lorem Ipsum is simply text the printing and typesetting standard industry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!--===projects===-->
+    <article id="projects" class="py-5">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-2 col-1">
+            <div class="side-line position-relative me-4  py-2 h-100">
+              <div class="h-100 position-relative" style="width: 1px; background-color: #c1c1c1;left: 10px;    top: 20px;"
+                role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              </div>
+              <small type="button" class="position-absolute top-0 start-0 fs-5 "
+                style="width: 2rem; height:2rem;">02</small>
+              <div class="d-none d-sm-block icon bg-property position-absolute top-0 " style="    left: 35px;"></div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-11">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xl-5 col-md-6 ">
+                  <h2>Latest Projects</h2>
+                </div>
+                <div class="col-md-6 offset-xl-1 text-end">
+                  <button class="bg-transparent border-0 fw-bold text-decoration-underline fs-5">View All</button>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div id="half-carousel" class="owl-carousel owl-theme">
+                  <div class="item">
+                    <div class="scroll-bar">
+                      <div class="box bg-property h-100" data-aos="zoom-in">
+                        <div class="card h-100 rounded-0 bg-black text-white float-end">
+                          <div class="card-body text-capitalize">
+                            <p class="card-text mb-0">branding</p>
+                            <h5 class="card-title">BootstrapDash</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="scroll-bar">
+                      <div class="box bg-property h-100" style="background-image: url(assets/img/projects/img2.jpg);" data-aos="zoom-in">
+                        <div class="card h-100 rounded-0 bg-black text-white float-end">
+                          <div class="card-body text-capitalize">
+                            <p class="card-text mb-0">branding</p>
+                            <h5 class="card-title">BootstrapDash</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="scroll-bar">
+                      <div class="box bg-property h-100" style="background-image: url(assets/img/projects/img3.jpg);" data-aos="zoom-in">
+                        <div class="card h-100 rounded-0 bg-black text-white float-end">
+                          <div class="card-body text-capitalize">
+                            <p class="card-text mb-0">branding</p>
+                            <h5 class="card-title">BootstrapDash</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="scroll-bar">
+                      <div class="box bg-property h-100" style="background-image: url(assets/img/projects/img4.jpg);" data-aos="zoom-in">
+                        <div class="card h-100 rounded-0 bg-black text-white float-end">
+                          <div class="card-body text-capitalize">
+                            <p class="card-text mb-0">branding</p>
+                            <h5 class="card-title">BootstrapDash</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+              </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!--===team===-->
+    <article id="team" class="py-5">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-2 col-1">
+            <div class="side-line position-relative me-4  py-2 h-100">
+              <div class="h-100 position-relative" style="width: 1px; background-color: #c1c1c1;left: 10px;    top: 20px;"
+                role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              </div>
+              <small type="button" class="position-absolute top-0 start-0 fs-5 "
+                style="width: 2rem; height:2rem;">03</small>
+              <div class="d-none d-sm-block icon bg-property position-absolute top-0 " style="    left: 35px;"></div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-11">
+            <div class="container-fluid">
+              <div class="row mb-4">
+                <div class="col-xl-5 col-md-6 " data-aos="fade-up">
+                  <h2>Meet The Team
+                    Our Professionals</h2>
+                </div>
+                <div class="col-md-6 offset-xl-1" data-aos="fade-up">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio corporis delectus dolorem possimus, dolor rerum.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12 " data-aos="flip-right">
+                  <div class="card border-0 mt-3">
+                    <img src="assets/img/team/img1.jpg" class="w-100 " alt="">
+                    <div class="card-body ps-0">
+                      <h5 class="card-title fw-bold">Siri Jakobsson</h5>
+                      <p class="card-text mb-1">Web Developer</p>
+                      <ul class="social column-gap-3 nav-list navbar-nav  flex-row">
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">Fb</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">Tw</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">In</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 " data-aos="flip-right">
+                  <div class="card border-0 mt-3">
+                    <img src="assets/img/team/img2.jpg" class="w-100 " alt="">
+                    <div class="card-body ps-0">
+                      <h5 class="card-title fw-bold">Siri Jakobsson</h5>
+                      <p class="card-text mb-1">Web Developer</p>
+                      <ul class="social column-gap-3 nav-list navbar-nav  flex-row">
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">Fb</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">Tw</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">In</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 " data-aos="flip-right">
+                  <div class="card border-0 mt-3">
+                    <img src="assets/img/team/img3.jpg" class="w-100 " alt="">
+                    <div class="card-body ps-0">
+                      <h5 class="card-title fw-bold">Siri Jakobsson</h5>
+                      <p class="card-text mb-1">Web Developer</p>
+                      <ul class="social column-gap-3 nav-list navbar-nav  flex-row">
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">Fb</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">Tw</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="fw-bold nav-link d-inline-block" href="">In</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!--===Partners===-->
+    <article id="Partners" class="py-5 overflow-hidden">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-2 col-1">
+            <div class="side-line position-relative me-4  py-2 h-100">
+              <div class="h-100 position-relative" style="width: 1px; background-color: #c1c1c1;left: 10px;    top: 20px;"
+                role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              </div>
+              <small type="button" class="position-absolute top-0 start-0 fs-5 "
+                style="width: 2rem; height:2rem;">04</small>
+              <div class="d-none d-sm-block icon bg-property position-absolute top-0 " style="    left: 35px;"></div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-11">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xl-5 col-md-6 " data-aos="fade-up">
+                  <h2>Partners & clients</h2>
+                </div>
+                <div class="col-md-6 offset-xl-1" data-aos="fade-up">
+                  <p>We’re constantly refining our product. Adding new features. Working to help your business grow.</p>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-lg-4 col-sm-6 col-12 ">
+                  <div class="partners_logo px-3 py-5 mb-4" data-aos="zoom-out-right">
+                    <div class="bg-property img" style="background-image:url(assets/img/partners/client_1.png);"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 mb-4" data-aos="zoom-out-right">
+                  <div class="partners_logo px-3 py-5 ">
+                    <div class="bg-property img" style="background-image:url(assets/img/partners/client_2.png);"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 mb-4" data-aos="zoom-out-right">
+                  <div class="partners_logo px-3 py-5 ">
+                    <div class="bg-property img" style="background-image:url(assets/img/partners/client_3.png);"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 mb-4" >
+                  <div class="partners_logo px-3 py-5 "  >
+                    <div class="bg-property img" data-aos="zoom-out-left" style="background-image:url(assets/img/partners/client_4.png);"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 mb-4" >
+                  <div class="partners_logo px-3 py-5 "  >
+                    <div class="bg-property img" data-aos="zoom-out-left" style="background-image:url(assets/img/partners/client_5.png);"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12 mb-4" >
+                  <div class="partners_logo px-3 py-5 "  >
+                    <div class="bg-property img" data-aos="zoom-out-left" style="background-image:url(assets/img/partners/client_6.png);"></div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!--===news===-->
+    <article id="news" class="py-5">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-2 col-1">
+            <div class="side-line position-relative me-4  py-2 h-100">
+              <div class="h-100 position-relative" style="width: 1px; background-color: #c1c1c1;left: 10px;     top: 20px;"
+                role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              </div>
+              <small type="button" class="position-absolute top-0 start-0 fs-5 "
+                style="width: 2rem; height:2rem;">05</small>
+              <div class="d-none d-sm-block icon bg-property position-absolute top-0 " style="    left: 35px;"></div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-11">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xl-5 col-md-6 " data-aos="fade-up">
+                  <h2>What our clients say</h2>
+                </div>
+                <div class="col-md-6 offset-xl-1">
+                  <p>Share your stories and news with everyone.</p>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-lg-4 col-md-6 py-4" data-aos="fade-up">
+                  <div class="overflow-hidden h-100 card border-0 py-5 px-4">
+                    <div class="card-body card-material1 py-0 z-1">
+                      <div class="user-info d-flex column-gap-2 align-items-center mb-5">
+                        <img class="rounded-circle" src="assets/img/news/user1.jpg" alt="">
+                        <div class="text">
+                          <h3 class="fw-light">Posted by Colabrio</h3>
+                          <p class="mb-0">July 5, 2019</p>
+                        </div>
+                      </div>
+                      <small><span>Digital Strategy</span> 4 min read</small>
+                      <p class="card-text mt-2 mb-4">The Ultimate Guide to Make Your WordPress Journal.</p>
+                      <button class="position-relative d-block text-capitalize border-0 bg-transparent">Read more
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 py-4" data-aos="fade-up">
+                  <div class="overflow-hidden h-100 card card-material2 border-0 py-5 px-4">
+                    <div class="card-body  py-0 z-1">
+                      <div class="user-info d-flex column-gap-2 align-items-center mb-5">
+                        <img class="rounded-circle" src="assets/img/news/user2.jpg" alt="">
+                        <div class="text">
+                          <h3 class="fw-light">Posted by Stormie</h3>
+                          <p class="mb-0">dec 19, 2017</p>
+                        </div>
+                      </div>
+                      <small><span>Personal</span> 4 min read</small>
+                      <p class="card-text mt-2 mb-4">The Highly Contemporary UI/UX Design from a london.</p>
+                      <button class="position-relative d-block text-capitalize border-0 bg-transparent">Read more
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 py-4" data-aos="fade-up">
+                  <div class="overflow-hidden h-100 card card-material3 border-0 py-5 px-4">
+                    <div class="card-body py-0 z-1">
+                      <div class="user-info d-flex column-gap-2 align-items-center mb-5">
+                        <img class="rounded-circle" src="assets/img/news/user-3.jpg" alt="">
+                        <div class="text">
+                          <h3 class="fw-light">Posted by Angela</h3>
+                          <p class="mb-0">mar 30, 2014</p>
+                        </div>
+                      </div>
+                      <small><span>Personal</span> 4 min read</small>
+                      <p class="card-text mt-2 mb-4">A Color Exercise for our Brand’s Illustration</p>
+                      <button class="position-relative d-block text-capitalize border-0 bg-transparent">Read more
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!--===feedback===-->
+    <article id="feedback" class="py-5">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-2 col-1">
+            <div class="side-line position-relative me-4  py-2 h-100">
+              <div class="h-100 position-relative" style="width: 1px; background-color: #c1c1c1;left: 10px;    top: 20px;"
+                role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              </div>
+              <small type="button" class="position-absolute top-0 start-0 fs-5 "
+                style="width: 2rem; height:2rem;">06</small>
+              <div class="d-none d-sm-block icon bg-property position-absolute top-0 " style="    left: 35px;"></div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-11">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xl-8 col-md-8 " data-aos="fade-up">
+                  <h2>Meet The Team
+                    Our Professionals</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio corporis delectus dolorem possimus, dolor rerum.</p>
+                </div>
+                
+              </div>
+              <div class="row mt-5">
+                <div id="slid_carousel" class="owl-carousel owl-theme position-static" data-aos="fade-up">
+                  <div class="item">
+                    <div class="row" >
+                      <div class="user-info d-flex column-gap-3">
+                        <img src="assets/img/feedback/user1.jpg" alt="">
+                        <div class="info pe-5">
+                          <p>
+                            The revulsion in our feelings was therefore all the greater when the car suddenly escaped
+                            from this height of desolation, and a magnificent prospect burst upon our view.
+                          </p>
+                          <h3 class="m-0">Winnie Warner</h3>
+                          <small>Creative Company</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="row">
+                      <div class="user-info d-flex column-gap-3">
+                        <img src="assets/img/feedback/user2.jpg" alt="">
+                        <div class="info pe-5">
+                          <p>
+                            The revulsion in our feelings was therefore all the greater when the car suddenly escaped
+                            from this height of desolation, and a magnificent prospect burst upon our view.
+
+                          </p>
+                          <h3 class="m-0">Wesley Ford</h3>
+                          <small>Creative Company</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="row">
+                      <div class="user-info d-flex column-gap-3">
+                        <img src="assets/img/feedback/user3.jpg" alt="">
+                        <div class="info pe-5">
+                          <p>
+                            The revulsion in our feelings was therefore all the greater when the car suddenly escaped
+                            from this height of desolation, and a magnificent prospect burst upon our view.
+                          </p>
+                          <h3 class="m-0">Winnie Warner</h3>
+                          <small>Creative Company</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="row">
+                      <div class="user-info d-flex column-gap-3">
+                        <img src="assets/img/feedback/user4.jpg" alt="">
+                        <div class="info pe-5">
+                          <p>
+                            The revulsion in our feelings was therefore all the greater when the car suddenly escaped
+                            from this height of desolation, and a magnificent prospect burst upon our view.
+                          </p>
+                          <h3 class="m-0">Wesley Ford</h3>
+                          <small>Creative Company</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+    <!--===footer===-->
+  <footer id="footer" class="bg-black text-light py-5" data-aos="fade-up">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-4 col-lg-6">
+          <div class="content ps-3">
+            <!--===logo===-->
+            <div class="logo mb-3">
+              <div class="img"></div>
+            </div>
+
+
+            <!--===info===-->
+            <p class="w-lg-50">Don't be shy, get in touch with
+              us and create the world again!</p>
+            <ul class="social column-gap-2 nav-list navbar-nav  flex-row">
+              <li class="nav-item">
+                <a class="fw-bold text-light nav-link d-inline-block" href="">Fb</a>
+              </li>
+              <li class="nav-item">
+                <a class="fw-bold text-light nav-link d-inline-block" href="">Tw</a>
+              </li>
+              <li class="nav-item">
+                <a class="fw-bold text-light nav-link d-inline-block" href="">In</a>
+              </li>
+              <li class="nav-item">
+                <a class="fw-bold text-light nav-link d-inline-block" href="">Be</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--===details===-->
+        <div class="col-md-8 col-lg-6">
+          <div class="persnal-info">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul class="mb-4 list-unstyled">
+                    <li class="mb-2">
+                      <a href="#">PHONE</a>
+                    </li>
+                    <li>
+                      <a href="#">+80 (0)5 12 34 95 89</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul class="mb-4 list-unstyled">
+                    <li class="mb-2">
+                      <a href="#">ENQUIRUES</a>
+                    </li>
+                    <li>
+                      <a href="#">info@oleez.site</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul class="mb-4 list-unstyled">
+                    <li class="mb-2">
+                      <a href="#">ADDRESS</a>
+                    </li>
+                    <li>
+                      <a href="#">33 rue Burdeau 69089
+                        Paris France</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul class="mb-4 list-unstyled">
+                    <li class="mb-2">
+                      <a href="#">WORK HOURS</a>
+                    </li>
+                    <li>
+                      <a href="#">Weekdays: 09:00 - 18:00</a>
+                    </li>
+                    <li>
+                      <a href="#">Weekends: 11:00 - 17:00</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--===bottom line===-->
+      <hr class="border-dark">
+      <div class="row mt-2">
+        <div class="col-sm-6">
+          <p class="ps-3">© 2020, oleez Theme. Made with passion by BootstrapDash.</p>
+        </div>
+        <div class="col-sm-6 text-end">
+          <small>All right reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+    <!--===BOOTSTRAP JS LINK===-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+     <!--===AOS JS LINK===-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!--===OWL CAROUSEL JS LINK===-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+      <!--===JAVASCRIPT LINK===-->
+  <script src="assets/js/app.js">
+    
+  </script>
+</body>
+
+</html>
